@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kreiranje Responsive Galerije</title>
+
+
+<style>
+
+        body {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+      .container {
+       max-width: 960px;
+       width: 90%;
+       margin: 0 auto;
+       display: grid;
+       grid-template-columns: repeat(5, 150px);
+       grid-template-rows: repeat(2, 130px);
+       column-gap: 40px;
+       row-gap: 50px;
+       justify-content: start;
+       align-items: center;
+    }
+
+       .box {
+           box-sizing: border-box;
+           background-color: blue;
+           border: 1px solid black;
+           border-radius: 8px;
+           width: 140;
+           height: 110px;
+           overflow: hidden;
+           background-image: url(slika.png);
+           background-repeat: no-repeat;
+           background-size: contain;
+           background-position: top;
+
+       }
+
+
+       .box p {
+           background-color: #ffffff;
+           color: black;
+           text-align: center;
+           position: relative;
+           top: 74px;
+       }
+
+
+    @media screen and (max-width: 1024px) {
+.container {
+grid-template-columns: repeat(5, 150px);
+grid-template-rows: repeat(2, 120px);
+}
+
+#heading h1 {
+    font-weight: 400;
+    font-size: 24px;
+}
+}
+
+@media screen and (max-width: 768px) {
+.container {
+grid-template-columns: repeat(3, 150px);
+grid-template-rows: repeat(4, 120px);
+}
+
+#heading h1 {
+    font-weight: 400;
+    font-size: 24px;
+}
+}
+
+@media screen and (max-width: 414px) {
+.container {
+grid-template-columns: repeat(1, 120px);
+grid-template-rows: repeat(10, 120px);
+}
+
+#heading h1 {
+    font-weight: 400;
+    font-size: 24px;
+}
+}
+
+
+</style>
+
+
+</head>
+<body>
+
+    <div id="heading">
+
+     <h1>Gallery Heading</h1>
+
+    </div>
+
+
+    
+    <div class="container">
+
+        <div class="box"><p>Image Title</p></div>
+        <div class="box"><p>Image Title</p></div>
+        <div class="box"><p>Image Title</p></div>
+        <div class="box"><p>Image Title</p></div>
+        <div class="box"><p>Image Title</p></div>
+        <div class="box"><p>Image Title</p></div>
+        <div class="box"><p>Image Title</p></div>
+        <div class="box"><p>Image Title</p></div>
+        <div class="box"><p>Image Title</p></div>
+        <div class="box"><p>Image Title</p></div>
+
+    </div>
+
+
+    <div id="lorem"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+
+</body>
+</html>
